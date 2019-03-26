@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row box">
+    <div class="col-12">
+      <table>
+        <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Telefone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let cli of listClientes">
+          <td>{{cli.nome}}</td>
+          <td>{{cli.cpf | mask:'000.000.000-00'}}</td>
+          <td>{{cli.telefone | mask:'(00) 00000-0000'}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
